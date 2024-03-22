@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <a href="/add"><h1>add new</h1></a>
+    <div class="box" style="border:2px solid black;">
+<%for (let product of products){%>
+    <div class="box" style="border:2px solid black; width:200px;">
+<h1><%=product.pname%></h1>
+<h3><%=product.price%></h3>
+<h4><%=product.description%></h4>
+<a href="/edit/<%=product.id%>">edit</a><br><a href="/delete/<%=product.id%>">d</a>
+
+</div>
+    <%}%>
+    </div>
+</body>
+</html>
